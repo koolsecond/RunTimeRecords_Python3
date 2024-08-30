@@ -1,10 +1,17 @@
 ```mermaid
 classDiagram
-p_class <|-- c_class
-class p_class{
+FileDao <|-- ListFileDao
+FileDao <|-- DictFileDao
+class FileDao{
+ -fileSystem : IFileSystem
+ +FileDao(fileSystem : IFileSystem) FileDao
+ +FileDao() FileDao
+ +LoadFile(file : string) FileDto
+}
+class ListFileDao{
  +name
 }
-class c_class{
+class DictFileDao{
  +name
 }
 ```
