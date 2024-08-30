@@ -1,3 +1,3 @@
 ```mermaid
-bob->alice : hello!
+p_class <|-- c_class
 ```
